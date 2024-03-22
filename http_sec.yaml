@@ -1,0 +1,20 @@
+apiVersion: tyk.tyk.io/v1alpha1
+kind: SecurityPolicy
+metadata:
+  name: httpbin
+spec:
+  name: Some other Security Policy
+  state: active
+  active: true
+  access_rights_array:
+    - name: httpbin
+      namespace: default
+      versions:
+        - Default
+
+  # TODO: can we set sensible defaults for partitions?
+  partitions:
+    quota: true
+    rate_limit: true
+    acl: true
+  quota_max: 5
