@@ -1,3 +1,4 @@
+#!/bin/bash
 NAMESPACE=default
 APISecret=$(pwgen 20 1)
 
